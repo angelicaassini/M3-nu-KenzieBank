@@ -4,6 +4,7 @@ import Form from './components/Form';
 import List from './components/List';
 import { useState } from 'react';
 import './App.css';
+import TotalMoney from './components/TotalMoney';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         categories={categories}
         setFilter={setFilter}/>
       <Form categories={categories} addTransactionForm={addTransactionForm}/>
+      <TotalMoney listTransactions={listTransactions}/>
     </div>
   );
 }

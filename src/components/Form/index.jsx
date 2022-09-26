@@ -31,8 +31,8 @@ const Form = ({listTransactions, setListTransactions, categories, addTransaction
                 <input className="input-description"
                     type="text"
                     placeholder="Digite aqui sua descrição"
-                    value={formData.moneyValue}
-                    onChange={(e) => setFormData({...formData, moneyValue: e.target.value})} 
+                    value={formData.description}
+                    onChange={(e) => setFormData({...formData, description: e.target.value})} 
                     />
                 <span>Ex: Compra de roupas</span>
             </div>
@@ -42,9 +42,9 @@ const Form = ({listTransactions, setListTransactions, categories, addTransaction
                     <span>Valor</span>
                     <input className="input-value"
                         type="text"
-                        placeholder="1                        R$"
-                        value={formData.description}
-                        onChange={(e) =>  setFormData({...formData, description: e.target.value})} 
+                        placeholder="                         R$"
+                        value={formData.moneyValue}
+                        onChange={(e) =>  setFormData({...formData, moneyValue: e.target.value})} 
                     />
                 </div>
                 <div className="div-select">

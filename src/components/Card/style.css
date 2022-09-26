@@ -1,0 +1,53 @@
+li{
+    width: 560px;
+    height: 87px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F9FA;
+    border-radius: 4px;
+}
+
+.description-category{
+    margin: 11px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.description-category p{
+    font-family: 'Nunito';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+}
+
+.description-category span{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #343A40;
+}
+
+.money-trash{
+    margin: 11px 18px;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.money-trash span{
+    font-family: 'Nunito';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
