@@ -1,24 +1,28 @@
 import Card from "../Card";
 import TransactionFilter from "./TransactionFilter";
+import './style.css';
+import Img from '../../Group 271.png';
 
 const List = ({listTransactions, removeTransaction, categories, setFilter}) => {
     
 
     return (
-        <>
-            <TransactionFilter categories={categories} setFilter={setFilter}/>
+                  
+        <div className="transactionsList">
             {listTransactions.length ? (
-                <ul>
-                    {listTransactions.map((transaction, index) => (
-                        <Card key={index} transaction={transaction} removeTransaction={removeTransaction} />
-                    ))}
-                </ul>
+            <ul>
+                <TransactionFilter categories={categories} setFilter={setFilter}/>
+                {listTransactions.map((transaction, index) => (
+                    <Card key={index} transaction={transaction} removeTransaction={removeTransaction} />
+                ))}
+            </ul>
             ) 
             : 
             (
-                <h1 className="nao-transacao">Não há nenhuma transação a ser mostrada.</h1>
+                <img src={Img} alt="sem transacoes" />
             )}
-        </>
+        </div>
+    
     )
 }
 export default List;

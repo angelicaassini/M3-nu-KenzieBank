@@ -8,6 +8,9 @@
     background: #FFFFFF;
     border: 1px solid #E9ECEF;
     border-radius: 4px;
+
+    align-items: center;
+
 }
 
 .divSaldo div{

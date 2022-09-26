@@ -1,0 +1,9 @@
+
+.transactionList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+    justify-items: center;
+}

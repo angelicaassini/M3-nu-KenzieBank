@@ -41,8 +41,9 @@ const Form = ({listTransactions, setListTransactions, categories, addTransaction
                 <div className="div-value">
                     <span>Valor</span>
                     <input className="input-value"
-                        type="text"
-                        placeholder="                         R$"
+                        type="number"
+                        min="0"
+                        placeholder="                       R$"
                         value={formData.moneyValue}
                         onChange={(e) =>  setFormData({...formData, moneyValue: e.target.value})} 
                     />
