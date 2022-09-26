@@ -1,3 +1,5 @@
+import {FaTrash} from "react-icons/fa";
+
 const Card = ({transaction, removeTransaction}) =>{
 
 
@@ -7,7 +9,8 @@ const Card = ({transaction, removeTransaction}) =>{
             <p>{transaction.description}</p>
             <span>{transaction.category}</span>
             <button onClick={() => removeTransaction(transaction)}>
-                lixeira</button>
+                <FaTrash/>
+            </button>
         </li>
     )
 }

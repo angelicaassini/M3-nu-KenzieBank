@@ -16,7 +16,7 @@ const List = ({listTransactions, removeTransaction, categories, setFilter}) => {
             ) 
             : 
             (
-                <h1>Não há nenhuma transação a ser mostrada.</h1>
+                <h1 className="nao-transacao">Não há nenhuma transação a ser mostrada.</h1>
             )}
         </>
     )

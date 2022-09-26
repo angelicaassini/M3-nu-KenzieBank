@@ -13,7 +13,7 @@ function App() {
   const newListTransactions = listTransactions.filter(transaction => 
       filter === "" ? true : transaction.category === filter)
 
-  const categories = ["entrada", "saída"]
+  const categories = ["Entradas", "Despesas"]
 
   function addTransactionForm(formData){
     setListTransactions([...listTransactions, formData])

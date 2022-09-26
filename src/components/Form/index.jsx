@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './style.css';
 
 const Form = ({listTransactions, setListTransactions, categories, addTransactionForm}) => {
     const [formData, setFormData] = useState({
@@ -25,24 +26,39 @@ const Form = ({listTransactions, setListTransactions, categories, addTransaction
    
     return(
         <form onSubmit={onSubmit}>
-            <input 
-                type="text"
-                value={formData.moneyValue}
-                onChange={(e) => setFormData({...formData, moneyValue: e.target.value})} 
-            />
-            <input 
-                type="text"
-                value={formData.description}
-                onChange={(e) =>  setFormData({...formData, description: e.target.value})} 
-            />
-            <select onChange={(e) => setFormData({...formData, category: e.target.value})}
-                    defaultValue={formData.category}>
+            <div className="div-description">
+                <span>Descrição</span>
+                <input className="input-description"
+                    type="text"
+                    placeholder="Digite aqui sua descrição"
+                    value={formData.moneyValue}
+                    onChange={(e) => setFormData({...formData, moneyValue: e.target.value})} 
+                    />
+                <span>Ex: Compra de roupas</span>
+            </div>
 
-                {categories.map((category, index)  => (
-                    <option key={index} value={category}>{category}</option>
-                ))}
-            </select>
-            <button type="submit">Enviar</button>
+            <div className="value-category">
+                <div className="div-value">
+                    <span>Valor</span>
+                    <input className="input-value"
+                        type="text"
+                        placeholder="1                        R$"
+                        value={formData.description}
+                        onChange={(e) =>  setFormData({...formData, description: e.target.value})} 
+                    />
+                </div>
+                <div className="div-select">
+                    <span>Tipo de valor</span>
+                    <select onChange={(e) => setFormData({...formData, category: e.target.value})}
+                            defaultValue={formData.category}>
+
+                        {categories.map((category, index)  => (
+                            <option key={index} value={category}>{category}</option>
+                        ))}
+                    </select>
+                </div>
+            </div>
+            <button className="submit-button" type="submit">Inserir valor</button>
         </form>
     )
 }
