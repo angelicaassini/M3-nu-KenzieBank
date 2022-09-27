@@ -7,3 +7,11 @@
     width: 100%;
     justify-items: center;
 }
+
+@media screen and (max-width: 425px) {
+    .transactionList{
+        flex-direction: column;
+        width: 90vw;
+    }
+    
+}

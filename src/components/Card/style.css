@@ -7,6 +7,16 @@ li{
     align-items: center;
     background-color: #F8F9FA;
     border-radius: 4px;
+    list-style-type: none;
+}
+
+@media screen and  (max-width: 425px) {
+    li{
+        flex-direction: column;
+        width: 90vw;
+        justify-content: none;
+    }
+    
 }
 
 .description-category{

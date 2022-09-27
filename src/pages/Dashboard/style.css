@@ -44,7 +44,25 @@ main{
     height: 70vh;
     margin-left: 260px;
     margin-right: 260px;
+}
 
+@media screen and (max-width: 425px){
+    
+    main{
+        flex-direction:column;
+        width: 90%;
+        margin-left: unset;
+        margin-right: unset;
+    }
+    .divList{
+        margin-top: unset;
+        width: 90%;
+    }
+
+    .leftColumn{
+        margin-top: 450px;
+        
+    }
 }
 
 .divList{
