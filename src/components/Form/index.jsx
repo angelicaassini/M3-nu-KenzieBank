@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './style.css';
 
-const Form = ({listTransactions, setListTransactions, categories, addTransactionForm}) => {
+const Form = ({categories, addTransactionForm}) => {
     const [formData, setFormData] = useState({
         moneyValue: "",
         description: "",
@@ -15,7 +15,7 @@ const Form = ({listTransactions, setListTransactions, categories, addTransaction
             setFormData({
                 moneyValue: "",
                 description: "",
-                category: categories[0]
+                category: formData.category
             })
         }
         else{
